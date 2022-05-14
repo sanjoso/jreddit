@@ -1,0 +1,65 @@
+.menubar {
+    height: 50px;
+    width: 100%;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    position: fixed;
+
+    
+    &__logo {
+        width: 99px;
+        padding-left: 18px;
+        display: flex;
+        align-items: center;
+
+        &__img {
+            height: 18px;
+            width: 30px;
+        }
+
+        &__text {
+            padding-left: 2px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    }
+
+    &__search {
+        width: 28px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transition: width 0.8s;
+
+        &__img {
+            width: 20px;
+            height: 20px;
+            padding-right: 18px;
+            cursor: pointer;
+        }
+
+        &__bar {
+            height: 30px;
+            width: 250px;
+            margin-left: -10px;
+            margin-right: 5px;
+            background-color: $lmsearch;
+            border: none;
+            border-radius: 15px;
+            color: $primary;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: lighter;
+            position: relative;
+            outline: none;
+            text-indent: 14px;
+        }
+        &:focus-within {    
+            width: 288px;
+        }
+    }
+}

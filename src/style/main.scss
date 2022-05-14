@@ -1,0 +1,42 @@
+//font import
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+//config imports
+@import './config';
+
+:root {
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+// component imports
+@import '../components/menubar/style/menubar';
+
+
+// media queries
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: $lmtext;
+    }
+};
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $dmbackground;
+        color: white;
+        //put the card classes here and their BG colors
+    }
+    
+    .menubar__search__bar {
+        background-color: $dmsearch;
+        color: white;
+    }
+}
