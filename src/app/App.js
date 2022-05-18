@@ -1,12 +1,20 @@
 import { Menubar } from "../components/menubar/Menubar";
-import { Home } from "../components/home/Home";
+import { Feed } from "../components/feed/Feed";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { SinglePost } from "../components/singlepost/SinglePost";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+
       <Menubar />
-      <Home />
-    </div>
+        <Routes>
+          <Route path="/:id" element={<SinglePost />} />
+          <Route path="/" element={<Feed />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

@@ -16,7 +16,6 @@ export const Menubar = (props) => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(searchTerm);
     }
 
     return (

@@ -16,8 +16,16 @@ body {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: $lmtext;
+}
+
 // component imports
 @import '../components/menubar/style/menubar';
+@import '../components/feed/style/feed';
+@import '../features/post/style/post';
+@import '../components/singlepost/style/singlepost';
 
 
 // media queries
