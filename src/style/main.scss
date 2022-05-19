@@ -26,6 +26,8 @@ a {
 @import '../components/feed/style/feed';
 @import '../features/post/style/post';
 @import '../components/singlepost/style/singlepost';
+@import '../features/comments/style/comments';
+@import '../components/singlecomment/style/singlecomment';
 
 
 // media queries
@@ -34,6 +36,9 @@ a {
         background-color: white;
         color: $lmtext;
     }
+    .menubar {
+        background-color: white;
+    }
 };
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +46,9 @@ a {
         background-color: $dmbackground;
         color: white;
         //put the card classes here and their BG colors
+    }
+    .menubar {
+        background-color: $dmbackground;
     }
     
     .menubar__search__bar {
