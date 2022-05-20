@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Post = (props) => {
-    const post = props.post;
+    const post = props.post.data;
 
     return (
         <Link to={post.id} permalink={post.permalink}>

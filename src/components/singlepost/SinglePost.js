@@ -4,7 +4,7 @@ import '../../style/main.css';
 
 export const SinglePost = (props) => {
     const params = useParams();
-    // Basically we'll fetch the specific post by the URL, and then extrac the data we need from it and render it. I don't think we need to access the store necessarily. The store just is used to map the posts in the feed view.
+    console.log(params);
 
     return (
         <div className="singlepost">
