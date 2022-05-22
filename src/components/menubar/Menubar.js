@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-//import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { getSearchResults } from "../../features/post/postSlice";
 import '../../style/main.css';
 
 export const Menubar = (props) => {
     const [searchTerm, setSearchTerm] = useState('search reddit...');
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     function handleChange(event) {
         setSearchTerm(event.target.value)
@@ -16,6 +17,9 @@ export const Menubar = (props) => {
 
     function handleSubmit(event) {
         event.preventDefault();
+        console.log(searchTerm);
+        dispatch(getSearchResults(searchTerm));
+
     }
 
     return (

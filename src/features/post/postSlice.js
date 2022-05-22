@@ -5,13 +5,26 @@ export const getInitialPosts = createAsyncThunk(
         try {
             const response = await fetch('https://www.reddit.com/r/pic.json');
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
             return jsonResponse;
         } catch (error) {
             console.log(error);
         }
     }
 );
+
+export const getSearchResults = createAsyncThunk(
+    'posts/getSearchResults', async (term) => {
+        try {
+            const response = await fetch(`http://api.reddit.com/r/${term}.json`);
+            const jsonResponse = await response.json();
+            console.log(jsonResponse);
+            return jsonResponse;
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+)
 
 const slice = {
     name: 'posts',
@@ -40,7 +53,22 @@ const slice = {
             state.isLoading = false;
             state.hasError = true;
         },
-    }
+
+        
+        [getSearchResults.pending]: (state, action) => {
+            state.isLoading = true;
+            state.hasError = false;
+        },
+        [getSearchResults.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            state.hasError = false;
+            state.posts = action.payload.data.children;
+        },
+        [getSearchResults.rejeted]: (state, action) => {
+            state.isLoading = false;
+            state.hasError = true;
+        },
+    },
 };
 
 
