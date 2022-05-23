@@ -1,6 +1,6 @@
 import { Menubar } from "../components/menubar/Menubar";
 import { Feed } from "../components/feed/Feed";
-import { SinglePost } from "../components/singlepost/SinglePost";
+import { SinglePost } from "../features/singlepost/SinglePost";
 import { Comments } from "../features/comments/Comments";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 

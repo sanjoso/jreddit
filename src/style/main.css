@@ -128,8 +128,8 @@ a {
   height: 283px;
   margin-top: 15px;
   border-radius: 15px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .post__info {
