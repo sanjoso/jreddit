@@ -39,6 +39,9 @@ a {
     .menubar {
         background-color: white;
     }
+    .comments {
+        background-color: white;
+    }
 };
 
 @media (prefers-color-scheme: dark) {
@@ -54,5 +57,9 @@ a {
     .menubar__search__bar {
         background-color: $dmsearch;
         color: white;
+    }
+
+    .comments {
+        background-color: $dmbackground;
     }
 }

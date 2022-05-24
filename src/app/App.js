@@ -12,7 +12,7 @@ function App() {
 
       <Menubar />
         <Routes>
-          <Route path="/:id/comments" element={<Comments />} />
+          {/* <Route path="/:id/comments" element={<Comments />} /> */}
           <Route path="/:id" element={<SinglePost />} />
           <Route path="/" element={<Feed />} />
         </Routes>

@@ -1,10 +1,14 @@
 .comments {
-    width: calc(100% - 36px);
+    width: 100%;
+    box-sizing: border-box;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    z-index: 100;
 
     &__backtopost {
         width: 200px;
@@ -30,5 +34,10 @@
             padding: 0;
             font-size: 1.9rem;
         }
+    }
+
+    &__comment {
+        margin-left: 0px;
+        padding-left: 0px;
     }
 }
