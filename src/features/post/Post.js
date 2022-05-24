@@ -3,13 +3,10 @@ import { Link } from "react-router-dom";
 
 export const Post = (props) => {
     const post = props.post.data;
-
-    function handleClick(event) {
-        console.log(event);
-    }
+    const permalink = props.post.data.permalink;
 
     return (
-        <Link to={post.id} permalink={post.permalink} onClick={handleClick}>
+        <Link to={post.id} state={{permalink: permalink}}>
             <div className="post">
                 {post.post_hint === 'image' &&
                     <div className="post__img">

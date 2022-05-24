@@ -17,7 +17,6 @@ export const getSearchResults = createAsyncThunk(
         try {
             const response = await fetch(`http://api.reddit.com/r/${term}.json`);
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
             return jsonResponse;
 
         } catch (error) {
@@ -64,7 +63,7 @@ const slice = {
             state.hasError = false;
             state.posts = action.payload.data.children;
         },
-        [getSearchResults.rejeted]: (state, action) => {
+        [getSearchResults.rejected]: (state, action) => {
             state.isLoading = false;
             state.hasError = true;
         },

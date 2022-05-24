@@ -1,9 +1,6 @@
 .singlepost {
-    width: calc(100% - 12px);
+    width: 94.3%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
 
     &__img {
         width: 404px;
@@ -34,7 +31,7 @@
     &__commentbtn {
         height: 40px;
         width: 145px;
-        margin: 0 auto;
+        margin: 20px auto 0px auto;
         border-radius: 25px;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
         display: flex;

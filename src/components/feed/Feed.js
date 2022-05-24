@@ -9,12 +9,12 @@ import '../../style/main.css';
 
 export const Feed = () => {
 
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const posts = useSelector(selectPosts);
 
      useEffect(() => {
          dispatch(getInitialPosts());
-     }, []);
+     }, [dispatch]);
 
     return (
         <div className="feed">
