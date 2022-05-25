@@ -1,11 +1,19 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { selectComments } from "./commentsSlice";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { fetchComments, selectComments } from "./commentsSlice";
 import { SingleComment } from "../../components/singlecomment/SingleComment";
 import '../../style/main.css';
 
 export const Comments = (props) => {
     const comments = useSelector(selectComments);
+    const dispatch = useDispatch();
+    const location = useLocation();
+    const { permalink } = location.state;
+
+    useEffect(() => {
+        dispatch(fetchComments(permalink));
+    }, []);
 
     return (
         <div className="comments">
