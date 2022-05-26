@@ -13,9 +13,12 @@
     &__backtopost {
         width: 200px;
         margin: 65px auto 0px auto;
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+
+
         h5 {
             margin: 0;
             padding: 0;

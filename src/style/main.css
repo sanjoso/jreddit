@@ -14,7 +14,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #011627;
 }
 
 .menubar {
@@ -40,6 +39,7 @@ a {
 .menubar__logo {
   width: 99px;
   padding-left: 18px;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,6 +259,7 @@ a {
 .comments__backtopost {
   width: 200px;
   margin: 65px auto 0px auto;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,8 +317,13 @@ a {
   width: 30px;
   height: 30px;
   margin-top: 15px;
-  background-color: blue;
   border-radius: 50%;
+  border: 2px solid #24A19C;
+}
+
+.singlecomment__authorbar__img h2 {
+  margin: 0;
+  padding: 0 0 0 7px;
 }
 
 .singlecomment__authorbar h4 {
@@ -341,6 +347,9 @@ a {
     background-color: white;
     color: #011627;
   }
+  a {
+    color: #011627;
+  }
   .menubar {
     background-color: white;
   }
@@ -352,6 +361,9 @@ a {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #21262E;
+    color: white;
+  }
+  a {
     color: white;
   }
   .menubar {

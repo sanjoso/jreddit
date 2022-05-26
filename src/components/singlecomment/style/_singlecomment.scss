@@ -13,8 +13,13 @@
             width: 30px;
             height: 30px;
             margin-top: 15px;
-            background-color: blue;
             border-radius: 50%;
+            border: 2px solid $primary;
+
+            h2 {
+                margin: 0;
+                padding: 0 0 0 7px;
+            }
         }
 
         h4 {

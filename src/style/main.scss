@@ -18,7 +18,6 @@ body {
 
 a {
     text-decoration: none;
-    color: $lmtext;
 }
 
 // component imports
@@ -36,6 +35,10 @@ a {
         background-color: white;
         color: $lmtext;
     }
+    a {
+        color: $lmtext;
+    }
+
     .menubar {
         background-color: white;
     }
@@ -50,6 +53,10 @@ a {
         color: white;
         //put the card classes here and their BG colors
     }
+    a {
+        color: white;
+    }
+
     .menubar {
         background-color: $dmbackground;
     }

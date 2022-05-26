@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getInitialPosts = createAsyncThunk(
-    'posts/getInitialPosts', async () => {
+    'posts/fetchInitialPosts', async () => {
         try {
             const response = await fetch('https://www.reddit.com/r/pic.json');
             const jsonResponse = await response.json();
