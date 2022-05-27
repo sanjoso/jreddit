@@ -2,4 +2,7 @@
     width: 100%;
     position: absolute;
     top: 71px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

@@ -8,15 +8,16 @@ import { getInitialPosts } from "../../features/post/postSlice";
 import '../../style/main.css';
 
 export const Feed = () => {
-    let count = 0;
     const dispatch = useDispatch();
     const posts = useSelector(selectPosts);
 
      useEffect(() => {
-         dispatch(getInitialPosts());
-         count ++;
-         console.log(count);
-     }, );
+         if (posts === []) {
+            dispatch(getInitialPosts());
+        } else {
+            return;
+        }
+     }, []);
 
     return (
         <div className="feed">

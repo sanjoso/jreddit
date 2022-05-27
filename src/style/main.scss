@@ -30,43 +30,4 @@ a {
 
 
 // media queries
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: white;
-        color: $lmtext;
-    }
-    a {
-        color: $lmtext;
-    }
-
-    .menubar {
-        background-color: white;
-    }
-    .comments {
-        background-color: white;
-    }
-};
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: $dmbackground;
-        color: white;
-        //put the card classes here and their BG colors
-    }
-    a {
-        color: white;
-    }
-
-    .menubar {
-        background-color: $dmbackground;
-    }
-    
-    .menubar__search__bar {
-        background-color: $dmsearch;
-        color: white;
-    }
-
-    .comments {
-        background-color: $dmbackground;
-    }
-}
+@import './mediaqueries';
