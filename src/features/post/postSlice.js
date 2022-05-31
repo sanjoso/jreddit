@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getInitialPosts = createAsyncThunk(
     'posts/fetchInitialPosts', async () => {
         try {
-            const response = await fetch('https://www.reddit.com/r/pic.json');
+            const response = await fetch('https://www.reddit.com/r/pic.json?limit=12');
             const jsonResponse = await response.json();
             return jsonResponse;
         } catch (error) {
@@ -29,6 +29,7 @@ const slice = {
     name: 'posts',
     initialState: {
         posts: [],
+        subreddit: '',
         isLoading: false,
         hasError: false,
     },
@@ -47,6 +48,7 @@ const slice = {
             state.isLoading = false;
             state.hasError = false;
             state.posts = action.payload.data.children;
+            state.subreddit = 'pic';
         },
         [getInitialPosts.rejected]: (state, action) => {
             state.isLoading = false;
@@ -62,6 +64,7 @@ const slice = {
             state.isLoading = false;
             state.hasError = false;
             state.posts = action.payload.data.children;
+            state.subreddit = action.payload.data.children[0].data.subreddit;
         },
         [getSearchResults.rejected]: (state, action) => {
             state.isLoading = false;
@@ -76,3 +79,4 @@ export const { getPosts } = postSlice.actions;
 export default postSlice.reducer;
 
 export const selectPosts = (state) => state.posts.posts;
+export const selectSubreddit = (state) => state.posts.subreddit;

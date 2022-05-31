@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { getPostData } from "./singlePostSlice";
 import { selectSinglePost } from "./singlePostSlice";
 import { Link } from "react-router-dom";
+import { Comments } from '../comments/Comments';
 import '../../style/main.css';
 
 export const SinglePost = (props) => {

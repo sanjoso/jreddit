@@ -11,8 +11,13 @@
     .menubar {
         background-color: white;
     }
+
     .comments {
         background-color: white;
+    }
+
+    .feed__subredditname {
+        color: $primary;
     }
 };
 
@@ -38,6 +43,10 @@
     .comments {
         background-color: $dmbackground;
     }
+
+    .feed__subredditname {
+        color: white;
+    }
 }
 
 
@@ -48,18 +57,26 @@
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     {
-        .singlepost {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            
-            &__img {
-            width: 98%;
-            min-width: 404px;
-            }
+    }
 
-            &__title {
-                width: 98%;
+
+// computer screens
+    @media only screen
+    and (min-device-width: 1025px)
+    {
+        .feed {
+            top: 40px;
+            
+            &__subredditname {
+            display: block;
+            }
+        }
+
+        .singlepost {
+
+            &__img {
+                width: 1000px;
+                height: 500px;
             }
         }
     }

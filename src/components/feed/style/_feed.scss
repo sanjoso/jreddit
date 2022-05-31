@@ -2,7 +2,19 @@
     width: 100%;
     position: absolute;
     top: 71px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+
+    &__subredditname {
+        margin: 0;
+        padding: 0;
+        font-size: 1.625rem;
+        display: none;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    &__posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 }

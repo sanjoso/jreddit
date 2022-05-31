@@ -1,17 +1,21 @@
 .singlepost {
     width: 94.3%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     &__img {
-        width: 404px;
-        height: 463px;
+        width: 98%;
+        min-width: 404px;
+        min-height: 463px;
         margin: 62px auto 0 auto;
         border-radius: 15px;
         object-fit: cover;
     }
 
     &__title {
-        width: 404px;
+        width: 98%;
         h1 {
             margin: 0;
             padding: 9px 0 0 0;

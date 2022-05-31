@@ -19,7 +19,6 @@ export const Menubar = (props) => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(searchTerm);
         dispatch(getSearchResults(searchTerm));
         navigate("/");
 

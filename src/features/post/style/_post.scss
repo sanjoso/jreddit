@@ -4,6 +4,9 @@
     margin: 0 auto 42px auto;
     border-radius: 15px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     cursor: pointer;
 }
 .post__img {
@@ -27,7 +30,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    top: 15px;
+    top: 5px;
 }
 .post__title {
     h3 {
