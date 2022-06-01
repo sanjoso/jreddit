@@ -3,7 +3,15 @@ import '../../style/main.css';
 
 export const SingleComment = (props) => {
     const comment = props.comment.data;
-    const author = comment.author.charAt(0).toUpperCase();
+    let author;
+    let name;
+    if (comment.author) {
+        author = comment.author.charAt(0).toUpperCase();
+        name = comment.author;
+    } else {
+        author = 'U';
+        name = 'Unknown';
+    };
 
     return (
         <div className="singlecomment">
@@ -12,7 +20,7 @@ export const SingleComment = (props) => {
                     <h2>{author}</h2>
                 </div>
                 <div className="singlecomment_authorbar__authorname">
-                    <h4>{comment.author}</h4>
+                    <h4>{name}</h4>
                 </div>
             </div>
 

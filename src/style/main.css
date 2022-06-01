@@ -383,9 +383,9 @@ a {
 }
 
 .singlecomment__separatorline {
-  width: 347px;
+  width: 90%;
   height: 1px;
-  background-color: #f3f3f3;
+  background-color: #eaeaea;
 }
 
 @media (prefers-color-scheme: light) {

@@ -20,7 +20,7 @@ export const SinglePost = (props) => {
 
     return (
         <div className="singlepost">
-            <img className="singlepost__img" src={post.url_overridden_by_dest} alt=""/>
+            <img className="singlepost__img" src={post.url_overridden_by_dest} alt=""/> 
             <div className="singlepost__title">
                 <h1>{post.title}</h1>
             </div>

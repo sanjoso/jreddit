@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getInitialPosts = createAsyncThunk(
     'posts/fetchInitialPosts', async () => {
         try {
-            const response = await fetch('https://www.reddit.com/r/pic.json?limit=12');
+            const response = await fetch('https://www.reddit.com/r/pic.json?limit=21');
             const jsonResponse = await response.json();
             return jsonResponse;
         } catch (error) {
@@ -15,7 +15,7 @@ export const getInitialPosts = createAsyncThunk(
 export const getSearchResults = createAsyncThunk(
     'posts/getSearchResults', async (term) => {
         try {
-            const response = await fetch(`http://api.reddit.com/r/${term}.json`);
+            const response = await fetch(`http://api.reddit.com/r/${term}.json?limit=21`);
             const jsonResponse = await response.json();
             return jsonResponse;
 
