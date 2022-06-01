@@ -15,7 +15,7 @@ export const Comments = (props) => {
 
     useEffect(() => {
         dispatch(fetchComments(permalink));
-    }, []);
+    });
 
     return (
         <div className="comments">

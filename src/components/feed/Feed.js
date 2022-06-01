@@ -19,7 +19,7 @@ export const Feed = () => {
         } else {
             return;
         }
-    }, []);
+    });
 
     return (
         <div className="feed">
