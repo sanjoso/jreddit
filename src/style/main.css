@@ -96,6 +96,10 @@ a {
   text-indent: 14px;
 }
 
+.menubar__search__submitbtn {
+  margin-left: -1000px;
+}
+
 .menubar__search:focus-within {
   width: 288px;
 }
