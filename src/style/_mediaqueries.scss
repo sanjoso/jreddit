@@ -25,7 +25,6 @@
     body {
         background-color: $dmbackground;
         color: white;
-        //put the card classes here and their BG colors
     }
     a {
         color: white;
@@ -40,12 +39,20 @@
         color: white;
     }
 
+    .post {
+        background-color: $dmcardbg;
+    }
+
     .comments {
         background-color: $dmbackground;
     }
 
     .feed__subredditname {
         color: white;
+    }
+
+    .singlecomment__seperatorline {
+        background-color: $dmcardbg;
     }
 }
 
