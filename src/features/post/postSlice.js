@@ -15,7 +15,7 @@ export const getInitialPosts = createAsyncThunk(
 export const getSearchResults = createAsyncThunk(
     'posts/getSearchResults', async (term) => {
         try {
-            const response = await fetch(`http://api.reddit.com/r/${term}.json?limit=21`);
+            const response = await fetch(`https://api.reddit.com/r/${term}.json?limit=21`);
             const jsonResponse = await response.json();
             return jsonResponse;
 
