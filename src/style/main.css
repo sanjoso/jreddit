@@ -243,6 +243,11 @@ a {
   text-align: center;
 }
 
+.singlepost__text {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .singlepost__text p {
   margin: 25px 20px 0px 20px;
 }
