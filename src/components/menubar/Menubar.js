@@ -35,7 +35,9 @@ export const Menubar = (props) => {
             <div className="menubar__search" tabIndex="0">
                 <img className="menubar__search__img" src="/img/menubar/search.svg" alt="" />
                 <form onSubmit={handleSubmit}>
-                    <input className="menubar__search__bar" value={searchTerm} onChange={handleChange} onClick={handleClick} autoComplete="off" autoCorrect="off" autoCapitalize="off" enterKeyHint="search"/>
+                    <label htmlFor="searchBar">
+                        <input className="menubar__search__bar" value={searchTerm} onChange={handleChange} onClick={handleClick} autoComplete="off" autoCorrect="off" autoCapitalize="off" enterKeyHint="search"/>
+                    </label>
                     <input className="menubar__search__submitbtn" type="submit" value="Search"/>
                 </form>
             </div>
