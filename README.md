@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Reddit Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This was a challenge project I made for Codecademy's Full-Stack Engineering Career Path. The goal was to use the Reddit JSON API and build a Reddit client from scratch. All aspects from conception, design, coding, and deployment were done by me.
 
-In the project directory, you can run:
+### **Requirements**
 
-### `npm start`
+There were many requirements for this project, and they include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [x] The app must be built using React and Redux.
+- [x] The app must be version controlled with Git, and the repository hosted on GitHub.
+- [x] You must use a project management tool (**GitHub Projects**, ~~Trello~~, _etc..._)
+- [x] Write a README.md that documents the project including:
+  - [x] Wireframes
+  - [x] Technologies used
+  - [x] Application Features
+  - [x] Future update plans
+- [x] The app is available on both desktop and mobile.
+- [x] Users can access the application [live](https://jreddit.netlify.app/).
+- [x] Users see an intial view of the data when first visiting the app.
+- [x] Users can search the data using terms.
+- [x] Users are delighted with a cohesive design system.
+- [x] users are delighted with animations and transitions.
+- [x] users are able to leave an error state.
+- [x] App gets 90+ scores on [Lighthouse](https://web.dev/measure/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- My take on the project was to make a client that would display images very well, and was designed well. Too many Reddit clients are clunky and full of info. I tried to put the media front and center. Therefore, this client works best when searching subreddits with images.
+- Users can search for subreddits, click individual posts, and see top-level comments for each post.
+- The client is hosted with Netlify, so any changes to the main branch are auto-deployed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Future Work
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I plan to switch to the official Reddit API instead of the JSON API (which was the API we were supposed to use for this project), as that would give the user write capabilities, as the JSON API is read-only.
+- I plan to incorporate pagination using Reddit's "after" key in JSON responses.
